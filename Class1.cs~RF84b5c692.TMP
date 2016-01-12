@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text;
+using Microsoft.Xrm.Client;
+using Microsoft.Xrm.Sdk;
+using Microsoft.Crm.Sdk;
+
+namespace ClientIdPlugin
+{
+    public class ClientIdPlugin
+    {
+
+
+        protected internal string ComputeMainClientID(string AccountName)
+        {
+
+            AccountName = AccountName.ToLower();
+
+            StringBuilder result = new StringBuilder();
+
+            for (int i = 0; i <= AccountName.Length - 1; i++)
+            {
+                char c = AccountName[i];
+                if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
+                {
+                    result.Append(c);
+                }
+            }
+
+            if (result.Length > 35)
+            {
+                result = result.Remove(35, result.Length - 35);
+            }
+            else if (result.Length < 2)
+            {
+                result.Append("1");
+            }
+
+            //TODO Verify if ClientID already exists
+
+
+            return result.ToString();
+
+        }
+    }
+}
