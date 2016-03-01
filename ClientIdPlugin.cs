@@ -22,9 +22,10 @@ namespace ClientIdPlugin
 
             if (!context.InputParameters.Contains("Target") || !(context.InputParameters["Target"] is Entity)) return;
             if (tracingService == null) return;
-
+             
             var account = (Entity)context.InputParameters["Target"];
             if (account.LogicalName != "account") return;
+            if (account.Contains("ergo_clientid")) return;
 
             account.Attributes["ergo_clientid"] = ComputeMainClientID(account.Attributes["name"].ToString(), orgservice);
             orgservice.Update(account);
@@ -49,7 +50,7 @@ namespace ClientIdPlugin
                     result.Append(c);
             }
 
-            //Make sure the string is between 2 and maxClientIdLength characters long, If it is over maxClientIdLength truncate it and if it is below add padding
+            //Make sure the string is between 2 and maxClientIdLength characters long, If it is over maxClientIdLength truncate it and if it is below 2 add padding
             if (result.Length > maxClientIdLength)
                 result = result.Remove(maxClientIdLength, result.Length - maxClientIdLength);
             else if (result.Length < 2)
