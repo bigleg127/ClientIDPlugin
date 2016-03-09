@@ -26,6 +26,7 @@ namespace ClientIdPlugin
             var account = (Entity)context.InputParameters["Target"];
             if (account.LogicalName != "account") return;
             if (account.Contains("ergo_clientid")) return;
+            if (!account.Contains("name")) return;
 
             account.Attributes["ergo_clientid"] = ComputeMainClientID(account.Attributes["name"].ToString(), orgservice);
             orgservice.Update(account);

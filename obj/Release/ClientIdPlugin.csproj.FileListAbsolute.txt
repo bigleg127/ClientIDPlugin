@@ -1,0 +1,8 @@
+C:\Users\darrenhickey\Documents\Visual Studio 2013\Projects\ClientIdPlugin\ClientIdPlugin\bin\Release\ClientIdPlugin.dll
+C:\Users\darrenhickey\Documents\Visual Studio 2013\Projects\ClientIdPlugin\ClientIdPlugin\bin\Release\ClientIdPlugin.pdb
+C:\Users\darrenhickey\Documents\Visual Studio 2013\Projects\ClientIdPlugin\ClientIdPlugin\bin\Release\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\darrenhickey\Documents\Visual Studio 2013\Projects\ClientIdPlugin\ClientIdPlugin\bin\Release\Microsoft.Xrm.Client.dll
+C:\Users\darrenhickey\Documents\Visual Studio 2013\Projects\ClientIdPlugin\ClientIdPlugin\bin\Release\Microsoft.Xrm.Sdk.dll
+C:\Users\darrenhickey\Documents\Visual Studio 2013\Projects\ClientIdPlugin\ClientIdPlugin\obj\Release\ClientIdPlugin.csprojResolveAssemblyReference.cache
+C:\Users\darrenhickey\Documents\Visual Studio 2013\Projects\ClientIdPlugin\ClientIdPlugin\obj\Release\ClientIdPlugin.dll
+C:\Users\darrenhickey\Documents\Visual Studio 2013\Projects\ClientIdPlugin\ClientIdPlugin\obj\Release\ClientIdPlugin.pdb
